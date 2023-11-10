@@ -1,20 +1,20 @@
 # CRUD
-# MY Proyect
+# MY Project
 clients = ['Luis', 'Samuel']
 list(enumerate(clients))
 
 def create_client(client_name):
-    global clients
     if client_name not in clients: 
         clients.append(client_name) 
+        print(clients)
     else:
          print("Client already exists: {}".format(client_name))
-
 
 def update_client(client_name, client_name_update):
     if client_name in clients:
         index = clients.index(client_name) #arrojan la posicion del cliente
-        clients[index] = client_name_update
+        clients[index] = client_name_update #remplazo por posicion 
+        print(clients)
     else:
         print("The name its no found:{}".format(client_name))
 
